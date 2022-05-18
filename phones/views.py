@@ -18,12 +18,12 @@ def show_catalog(request):
     else:
         phones = Phone.objects.all()
     template = 'catalog.html'
-    context = {}
+    context = {'phones': phones}
     return render(request, template, context)
 
 
 def show_product(request, slug):
     phone = Phone.objects.filter(slug=slug)
     template = 'product.html'
-    context = {}
+    context = {'phone': phone}
     return render(request, template, context)
