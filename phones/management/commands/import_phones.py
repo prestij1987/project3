@@ -11,7 +11,7 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
-        with open('phones.csv', 'r') as file:
+        with open('C:\\Users\\lehal\\OneDrive\\Desktop\\Учеба\\БЛОК DJANGO\\домашка\\project_3_DJ\\work_with_database\\phones.csv', 'r') as file:
             phones = list(csv.DictReader(file, delimiter=';'))
             for row in phones:
                 print(row)
